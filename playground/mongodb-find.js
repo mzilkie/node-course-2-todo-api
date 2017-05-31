@@ -40,35 +40,5 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
   //   console.log('Unable to fetch users', err);
   // });
 
-  //deleteMany
-
-  // db.collection('Users').deleteMany({
-  //   name: 'Andrew'
-  // }).then((result) => {
-  //   console.log(result);
-  // }, (err) => {
-  //   console.log('Unable to delete todo', err);
-  // });
-
-  //deleteOne
-
-  db.collection('Users').deleteOne({
-    _id: new ObjectID('592dfb80718ad7be2a0785e8')
-  }).then((result) => {
-    console.log(result);
-  }, (err) => {
-    console.log('Unable to delete todo', err);
-  });
-
-  //findOneAndDelete
-
-  // db.collection('Todos').findOneAndDelete({
-  //   completed: false
-  // }).then((result) => {
-  //   console.log(result);
-  // }, (err) => {
-  //   console.log('Unable to delete todo', err);
-  // });
-
   //db.close();
 });
